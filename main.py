@@ -33,13 +33,11 @@ def resp():
     if(data["r"] == "RW10ZXJyYWRlY2Vnb3F1ZW10ZW11bW9saG9lcmVp"):
         return jsonify({
             "message" : "muito bem aguarde o proximo desafio",
-            "resp" : data
-            
-            
+            "resp" : data["r"]
             }), 201
-    return {
+    return jsonify({
         "message" : "Vc nao fez correto"
-    }
+    })
     
 
 
